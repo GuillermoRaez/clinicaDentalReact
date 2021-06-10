@@ -1,9 +1,10 @@
-import React from 'react'
+import React from 'react';
+import Boton from '../../components/Boton/Boton';
 
 const Dentistprofile = () => {
     return (
         <div>
-            Estamos en Profile de Dentist
+            <Boton destino="Appointments" path="/appointment"/>
         </div>
     )
 }

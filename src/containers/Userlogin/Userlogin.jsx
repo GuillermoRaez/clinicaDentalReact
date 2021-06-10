@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
 import {useHistory} from 'react-router-dom';
-import "./Login.css";
+import "./Userlogin.css";
 import axios from 'axios';
 
 
-const Login = () => {
+const Userlogin = () => {
 
     let history = useHistory();
 
@@ -18,38 +18,13 @@ const Login = () => {
    }
 
    const logMe = async () => {
-    
-    //Find why the if statement is not working - if true (dentistendpoint), if false (userendpoint)
 
-    let isDentist = true;
+    let body = {
+        email: credentials.email,
+        password: credentials.password,
+    }
 
-        let body = {
-            email: credentials.email,
-            password: credentials.password,
-        }
-
-        if(isDentist == false){
-            console.log(isDentist)
-        let res = await axios.post('http://localhost:3005/dentist/login', body);
-
-        let token = res.data.token;
-        let dentist = res.data.dentist;
-
-        if(token !== ""){
-            localStorage.setItem("token", token);
-            localStorage.setItem("dentist", JSON.stringify(dentist));
-
-            setTimeout(()=> {
-            
-                history.push("/dentistprofile");
-    
-            }, 750);
-        }if(token === ""){
-            setMensajeError("Las credenciales no son correctas!")
-        }
-    }else{
-        console.log("Hola");
-            let res = await axios.post('http://localhost:3005/user/login', body);
+    let res = await axios.post('http://localhost:3005/user/login', body);
 
             let token = res.data.token;
             let user = res.data.user;
@@ -65,10 +40,9 @@ const Login = () => {
                 }, 750);
             }if(token === ""){
                 setMensajeError("Las credenciales no son correctas!")
-                console.log("Hola")
             }
         }
-    }
+    
 
     return (
         <div className="vistaLogin">
@@ -83,4 +57,4 @@ const Login = () => {
     )
 }
 
-export default Login;
+export default Userlogin;
