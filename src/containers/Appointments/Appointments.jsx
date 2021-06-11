@@ -28,6 +28,7 @@ const Appointments = () => {
             })
             setCitas(res.data);
             console.log(res.data);
+
         } catch (err) {
             console.log({ message: err.message });
         }
@@ -38,7 +39,7 @@ const Appointments = () => {
             {citas.map((appointment, index) => (
 
                 <div className="card" key={index}>
-                    <p>{appointment.usuario}</p>
+                    <p>{appointment.usuario.firstname}</p>
                     <p>{appointment.doctor}</p>
                     <p>{appointment.treatment}</p>
                     <p>{appointment.price}</p>

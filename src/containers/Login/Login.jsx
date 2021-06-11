@@ -28,7 +28,7 @@ const Login = () => {
             password: credentials.password,
         }
 
-        if(isDentist == false){
+        if(isDentist){
             console.log(isDentist)
         let res = await axios.post('http://localhost:3005/dentist/login', body);
 
@@ -47,7 +47,7 @@ const Login = () => {
         }if(token === ""){
             setMensajeError("Las credenciales no son correctas!")
         }
-    }else{
+        }else{
         console.log("Hola");
             let res = await axios.post('http://localhost:3005/user/login', body);
 
