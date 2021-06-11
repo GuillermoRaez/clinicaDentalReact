@@ -1,5 +1,7 @@
+import axios from 'axios';
 import React, {useState} from 'react';
 import "./Userregister.css";
+import {useHistory} from "react-router";
 
 
 const Userregister = () => {
@@ -25,9 +27,24 @@ const Userregister = () => {
 
     //Funciones 
 
-    const ejecutaRegistro = () => {
+    const ejecutaRegistro = async () => {
         
-        console.log("me has pulsado");
+        let user = {
+            firstname: datosUser.firstname,
+            lastname: datosUser.lastname,
+            birthday: datosUser.birthday,
+            phone: datosUser.phone,
+            email: datosUser.email,
+            password: datosUser.password,
+            address: datosUser.address,
+        }
+
+        await axios.post(("http://localhost:3005/user"), user)        
+        .then(res => {console.log("Usuario registrado!")
+        }).catch(error => {
+            console.log(error)
+        });         
+
     }
 
     return (
