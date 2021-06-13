@@ -60,11 +60,11 @@ const Login = () => {
             let dentist = res.data.dentist;
             
             localStorage.setItem("token", token);
-            localStorage.setItem("user", JSON.stringify(dentist));
+            localStorage.setItem("dentist", JSON.stringify(dentist));
     
             setTimeout(()=> {
                 
-                history.push("/userprofile");
+                history.push("/dentistprofile");
         
             }, 750);
 

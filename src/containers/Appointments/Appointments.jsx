@@ -37,7 +37,12 @@ const Appointments = () => {
     }
 
     if (citas[0]?._id) {
-        return (<div>
+        return (
+        <div>
+            <div>
+                <Navbar></Navbar>
+            </div>
+            <div className="main">
             {citas.map((appointment, index) => (
 
                 <div className="card" key={index}>
@@ -48,6 +53,10 @@ const Appointments = () => {
                 </div>
 
             ))}
+            </div>
+            <div>
+                <Footbar></Footbar>
+            </div>
         </div>)
     } else {
         return (

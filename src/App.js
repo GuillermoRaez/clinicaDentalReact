@@ -28,7 +28,7 @@ function App() {
           <Route path="/dentistregister" exact component={Dentistregister}/>
           <Route path="/userprofile" exact component={Userprofile}/>
           <Route path="/dentistprofile" exact component={Dentistprofile}/>
-          <Route path="/appointment" exact component={Appointments}/>
+          <Route path="/appointments" exact component={Appointments}/>
 
         </Switch>
         <Route path="/footbar" exact component={Footbar}/>
