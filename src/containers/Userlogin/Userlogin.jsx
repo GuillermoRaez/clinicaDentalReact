@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import {useHistory} from 'react-router-dom';
 import "./Userlogin.css";
 import axios from 'axios';
+import Navbar from '../../components/Navbar/Navbar';
 
 
 const Userlogin = () => {
@@ -38,7 +39,8 @@ const Userlogin = () => {
                     history.push("/userprofile");
         
                 }, 750);
-            }if(token === ""){
+            }else{
+                console.log(token)
                 setMensajeError("Las credenciales no son correctas!")
             }
         }
@@ -46,6 +48,7 @@ const Userlogin = () => {
 
     return (
         <div className="vistaLogin">
+            <Navbar/>
             <pre>{JSON.stringify(credentials, null,2)}</pre>
             <div className="loginCard">
                 <input  type='email' name='email' title='email' onChange={updateCredentials} length='30'/>

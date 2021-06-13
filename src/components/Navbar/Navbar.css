@@ -1,0 +1,57 @@
+.nav {
+    background: linear-gradient(to right bottom, rgba(255,255,255,0.7), rgba(255,255,255,0.3));
+    background: white;
+    height: 15vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    /* padding: 0.5rem calc((100vw - 1000px) / 2); */
+    z-index: 0;
+}
+  
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.space {
+  height: 10vh;
+  width: 50vw;
+}
+
+.NavLink {
+  color: #050401;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  cursor: pointer;
+  position: relative;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 18px;
+}
+
+.img {
+  height: 5em;
+  width: auto;
+  padding-top: 0.5em;
+  /* padding-left: 2em; */
+  max-height: 10em;
+  /* margin-top: 1em; */
+
+}
+
+.NavMenu {
+  width: 17vw;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+.NavLink:hover {
+  
+  background-color: #E15554;
+  border-radius: 2%;
+  transition: 1s;
+}

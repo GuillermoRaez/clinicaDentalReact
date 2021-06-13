@@ -1,5 +1,9 @@
 import React, {useState} from 'react';
 import "./Dentistregister.css";
+import axios from 'axios';
+import Navbar from '../../components/Navbar/Navbar';
+import Footbar from '../../components/Footbar/Footbar';
+
 
 
 const Dentistregister = () => {
@@ -23,12 +27,26 @@ const Dentistregister = () => {
 
     //Funciones 
 
-    const ejecutaRegistro = () => {
+    const ejecutaRegistro = async () => {
         
-        console.log("me has pulsado");
+        let dentist = {
+            firstname: datosDentist.firstname,
+            lastname: datosDentist.lastname,
+            email: datosDentist.email,
+            password: datosDentist.password,
+            specialty: datosDentist.specialty,
+        }
+
+        axios.post(("http://localhost:3005/dentist/hire"), dentist)
+        .then(res => {console.log("Dentista registrado!")
+        }).catch(error => {
+            console.log(error)
+        });         
     }
 
     return (
+        <div>
+            <Navbar></Navbar>
         <div className="formulario">
 
             <input className="inputBase" type="text" name="firstname" 
@@ -48,6 +66,8 @@ const Dentistregister = () => {
 
             <div className="botonCuco" onClick={()=>ejecutaRegistro()}>Enviar</div>
         </div>
+        <Footbar></Footbar>
+    </div>
     )
 }
 

@@ -1,7 +1,8 @@
 import axios from 'axios';
 import React, {useState} from 'react';
+import Navbar from '../../components/Navbar/Navbar';
+import Footbar from '../../components/Footbar/Footbar';
 import "./Userregister.css";
-import {useHistory} from "react-router";
 
 
 const Userregister = () => {
@@ -48,6 +49,9 @@ const Userregister = () => {
     }
 
     return (
+    <div>
+        <Navbar></Navbar>
+        <div className="main">
         <div className="formulario">
 
             <input className="inputBase" type="text" name="firstname" 
@@ -73,7 +77,10 @@ const Userregister = () => {
 
             <div className="botonCuco" onClick={()=>ejecutaRegistro()}>Enviar</div>
         </div>
+        </div>
+        <Footbar></Footbar>
+    </div>
     )
 }
 
-export default Userregister
+export default Userregister;

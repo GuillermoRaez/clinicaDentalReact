@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import {useHistory} from 'react-router-dom';
+import Navbar from '../../components/Navbar/Navbar';
+import Footbar from '../../components/Footbar/Footbar';
 
 const Appointments = () => {
 
@@ -39,7 +41,7 @@ const Appointments = () => {
             {citas.map((appointment, index) => (
 
                 <div className="card" key={index}>
-                    <p>{appointment.usuario.firstname}</p>
+                    <p>{appointment.usuario}</p>
                     <p>{appointment.doctor}</p>
                     <p>{appointment.treatment}</p>
                     <p>{appointment.price}</p>
@@ -49,8 +51,11 @@ const Appointments = () => {
         </div>)
     } else {
         return (
-
+            <div>
+                <Navbar></Navbar>
             <div>Soy Profile</div>
+                <Footbar></Footbar>
+            </div>
         )
     }
 
