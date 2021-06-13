@@ -13,11 +13,29 @@
 
     background: white;
     background: linear-gradient(to right bottom, rgba(255,255,255,0.7), rgba(255,255,255,0.3));
-    min-height: 50vh;
-    width: 60%;
-    /* border-radius: ; */
+    min-height: 55vh;
+    width: 30%;
+    border-radius: 2rem;
 }
 
-/* .glass {
+.inputBase {
+    font-family: inherit;
+    width: 70%;
+    border: 0;
+    border-bottom: 2px solid gray;
+    outline: 0;
+    font-size: 1.3rem;
+    color: black;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+}
 
-} */
+/* .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: $gray;
+  } */

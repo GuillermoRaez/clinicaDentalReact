@@ -13,10 +13,7 @@ const Navbar = () => {
            <div className="space"></div>
             <div className="NavMenu">
               <div className="NavLink">
-                <NavLink style={{ color: 'inherit', textDecoration: 'inherit'}} to="/userregister">User Register</NavLink>
-              </div>
-              <div className="NavLink">
-                <NavLink style={{ color: 'inherit', textDecoration: 'inherit'}} to="/dentistregister">Dentist Register</NavLink>
+                <NavLink style={{ color: 'inherit', textDecoration: 'inherit'}} to="/register">Register</NavLink>
               </div>
               <div className="NavLink" activeClassName="selected">
                 <NavLink style={{ color: 'inherit', textDecoration: 'inherit'}} to="/login">Login</NavLink>

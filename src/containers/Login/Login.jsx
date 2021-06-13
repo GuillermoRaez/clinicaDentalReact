@@ -21,51 +21,53 @@ const Login = () => {
     
     //Find why the if statement is not working - if true (dentistendpoint), if false (userendpoint)
 
-    let isDentist = true;
+    if (! /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/.test(credentials.email) ) {
+        setMensajeError('Please introduce a valide email.');
+        return;
+   }
 
         let body = {
             email: credentials.email,
             password: credentials.password,
         }
 
-        if(isDentist){
-            console.log(isDentist)
-        let res = await axios.post('http://localhost:3005/dentist/login', body);
-
-        let token = res.data.token;
-        let dentist = res.data.dentist;
-
-        if(token !== ""){
-            localStorage.setItem("token", token);
-            localStorage.setItem("dentist", JSON.stringify(dentist));
-
-            setTimeout(()=> {
-            
-                history.push("/dentistprofile");
-    
-            }, 750);
-        }if(token === ""){
-            setMensajeError("Las credenciales no son correctas!")
-        }
-        }else{
-        console.log("Hola");
-            let res = await axios.post('http://localhost:3005/user/login', body);
+        if(document.getElementById("opciones").value === "user"){
+        
+            try {let res = await axios.post('http://localhost:3005/user/login', body);
 
             let token = res.data.token;
             let user = res.data.user;
 
-            if(token !== ""){
-                localStorage.setItem("token", token);
-                localStorage.setItem("user", JSON.stringify(user));
+            localStorage.setItem("token", token);
+            localStorage.setItem("user", JSON.stringify(user));
+
+            setTimeout(()=> {
+            
+                history.push("/userprofile");
     
-                setTimeout(()=> {
-                
-                    history.push("/userprofile");
+            }, 750);
+        } catch (err) {
+            setMensajeError("Credentials are not correct!")
+        }
+
+        }else{
         
-                }, 750);
-            }if(token === ""){
-                setMensajeError("Las credenciales no son correctas!")
-                console.log("Hola")
+            try {let res = await axios.post('http://localhost:3005/dentist/login', body);
+
+            let token = res.data.token;
+            let dentist = res.data.dentist;
+            
+            localStorage.setItem("token", token);
+            localStorage.setItem("user", JSON.stringify(dentist));
+    
+            setTimeout(()=> {
+                
+                history.push("/userprofile");
+        
+            }, 750);
+
+            }catch (err) {
+                setMensajeError("Credentials are not correct!")
             }
         }
     }
@@ -76,6 +78,10 @@ const Login = () => {
             <div className="loginCard">
                 <input  type='email' name='email' title='email' onChange={updateCredentials} length='30'/>
                 <input  type='password'  name='password' title='password' onChange={updateCredentials} length='30'/>
+                <select id = "opciones" className="input">
+                        <option value="user">User</option>
+                        <option value="dentist">Dentist</option>
+                    </select>
                 <div className="sendButton" onClick={()=>logMe()}>Login</div>
                 <div>{msgError}</div>
             </div>
