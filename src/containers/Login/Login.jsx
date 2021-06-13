@@ -2,6 +2,8 @@ import React, {useState} from 'react';
 import {useHistory} from 'react-router-dom';
 import "./Login.css";
 import axios from 'axios';
+import Navbar from '../../components/Navbar/Navbar';
+import Footbar from '../../components/Footbar/Footbar';
 
 
 const Login = () => {
@@ -22,7 +24,7 @@ const Login = () => {
     //Find why the if statement is not working - if true (dentistendpoint), if false (userendpoint)
 
     if (! /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/.test(credentials.email) ) {
-        setMensajeError('Please introduce a valide email.');
+        setMensajeError('Please introduce a valid email.');
         return;
    }
 
@@ -73,11 +75,14 @@ const Login = () => {
     }
 
     return (
+    <div>
+        <Navbar></Navbar>
+    <div className="main">
         <div className="vistaLogin">
             <pre>{JSON.stringify(credentials, null,2)}</pre>
             <div className="loginCard">
-                <input  type='email' name='email' title='email' onChange={updateCredentials} length='30'/>
-                <input  type='password'  name='password' title='password' onChange={updateCredentials} length='30'/>
+                <input className="inputBase"  type='email' name='email' title='email' placeholder="Email" onChange={updateCredentials} length='30'/>
+                <input className="inputBase"  type='password'  name='password' title='password' placeholder="Password" onChange={updateCredentials} length='30'/>
                 <select id = "opciones" className="input">
                         <option value="user">User</option>
                         <option value="dentist">Dentist</option>
@@ -86,6 +91,9 @@ const Login = () => {
                 <div>{msgError}</div>
             </div>
         </div>
+    </div>
+    <Footbar></Footbar>
+    </div>
     )
 }
 
