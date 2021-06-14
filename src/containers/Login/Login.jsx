@@ -41,6 +41,7 @@ const Login = () => {
             let user = res.data.user;
 
             localStorage.setItem("token", token);
+            localStorage.setItem("UserData", JSON.stringify(res.data.user))
             localStorage.setItem("user", JSON.stringify(user));
 
             setTimeout(()=> {
@@ -60,6 +61,7 @@ const Login = () => {
             let dentist = res.data.dentist;
             
             localStorage.setItem("token", token);
+            localStorage.setItem('DentistData', JSON.stringify(res.data.dentist))
             localStorage.setItem("dentist", JSON.stringify(dentist));
     
             setTimeout(()=> {
