@@ -81,7 +81,6 @@ const Login = () => {
         <Navbar></Navbar>
     <div className="main">
         <div className="vistaLogin">
-            <pre>{JSON.stringify(credentials, null,2)}</pre>
             <div className="loginCard">
                 <input className="inputBase"  type='email' name='email' title='email' placeholder="Email" onChange={updateCredentials} length='30'/>
                 <input className="inputBase"  type='password'  name='password' title='password' placeholder="Password" onChange={updateCredentials} length='30'/>
