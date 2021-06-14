@@ -75,7 +75,7 @@ const Userregister = () => {
                 <input className="inputBase" type="text" name="address" 
                 onChange={updateFormulario} placeholder="Address"></input>
     
-                <div className="botonCuco" onClick={()=>ejecutaRegistro()}>Enviar</div>
+                <div className="sendButton" onClick={()=>ejecutaRegistro()}>Enviar</div>
             </div>
         </div>
         <Footbar></Footbar>

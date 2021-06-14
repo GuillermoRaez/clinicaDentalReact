@@ -47,13 +47,14 @@ const Dentistregister = () => {
     return (
         <div>
             <Navbar></Navbar>
+            <div className="main">
         <div className="formulario">
 
             <input className="inputBase" type="text" name="firstname" 
-            onChange={updateFormulario} placeholder="firstname"></input>
+            onChange={updateFormulario} placeholder="Firstname"></input>
 
             <input className="inputBase" type="text" name="lastname" 
-            onChange={updateFormulario} placeholder="lastname"></input>
+            onChange={updateFormulario} placeholder="Lastname"></input>
 
             <input className="inputBase" type="email" name="email" 
             onChange={updateFormulario} placeholder="Email"></input>
@@ -62,9 +63,10 @@ const Dentistregister = () => {
             onChange={updateFormulario} placeholder="Password"></input>
 
             <input className="inputBase" type="text" name="specialty" 
-            onChange={updateFormulario} placeholder="specialty"></input>
+            onChange={updateFormulario} placeholder="Specialty"></input>
 
-            <div className="botonCuco" onClick={()=>ejecutaRegistro()}>Enviar</div>
+            <div className="sendButton" onClick={()=>ejecutaRegistro()}>Enviar</div>
+        </div>
         </div>
         <Footbar></Footbar>
     </div>

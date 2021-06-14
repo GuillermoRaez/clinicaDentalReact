@@ -1,0 +1,44 @@
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    background: white;
+    background: linear-gradient(to right bottom, rgba(255,255,255,0.7), rgba(255,255,255,0.3));
+    min-height: 55vh;
+    width: 30%;
+    border-radius: 2rem;
+}
+
+.inputBase {
+    font-family: inherit;
+    width: 70%;
+    border: 0;
+    border-bottom: 2px solid gray;
+    outline: 0;
+    font-size: 1.3rem;
+    color: black;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+}
+
+.sendButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+    width: 4em;
+    height: 2em;
+    border: cornsilk 1px solid;
+    border-radius: 2px;
+}

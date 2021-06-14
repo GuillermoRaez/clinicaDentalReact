@@ -10,6 +10,7 @@ const Home = () => {
     <div>
         <Navbar></Navbar>
         <div className="main">
+            Welcome to Adrian's and Guillermo's Dental Clinic
         </div>
         <Footbar></Footbar>
     </div>
