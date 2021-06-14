@@ -1,8 +1,8 @@
 import React from 'react'
 import Boton from '../../components/Boton/Boton'
+import Datauser from '../../components/Datauser/Datauser'
 import Footbar from '../../components/Footbar/Footbar'
 import Navbar from '../../components/Navbar/Navbar'
-import Appointments from '../Appointments/Appointments'
 import "./Userprofile.css"
 
 const Userprofile = () => {
@@ -10,7 +10,9 @@ const Userprofile = () => {
     <div>
         <Navbar></Navbar>
         <div className="main">
-            <div className="userCard"></div>
+            <div className="userCard">
+                <Datauser></Datauser>
+            </div>
             <div className="userMain">
                 <div className="userAction">
                    <Boton destino="New Appointments" path="/newappointments"/>
