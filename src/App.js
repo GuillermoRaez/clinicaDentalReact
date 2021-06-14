@@ -11,6 +11,7 @@ import Dentistregister from './containers/Dentistregister/Dentistregister';
 import Navbar from './components/Navbar/Navbar';
 import Footbar from './components/Footbar/Footbar';
 import Login from './containers/Login/Login';
+import Register from './containers/Register/Register';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
 
           <Route path="/" exact component={Home}/>
           <Route path="/login" exact component={Login}/>
+          <Route path="/register" exact component={Register}/>
           <Route path="/userregister" exact component={Userregister}/>
           <Route path="/dentistregister" exact component={Dentistregister}/>
           <Route path="/userprofile" exact component={Userprofile}/>
