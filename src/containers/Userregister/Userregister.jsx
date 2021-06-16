@@ -1,11 +1,14 @@
 import axios from 'axios';
 import React, {useState} from 'react';
+import {useHistory} from "react-router";
 import Navbar from '../../components/Navbar/Navbar';
 import Footbar from '../../components/Footbar/Footbar';
 import "./Userregister.css";
 
 
 const Userregister = () => {
+
+    let history = useHistory();
 
     //Hooks
     const [datosUser, setDatosUser] = useState(
@@ -42,10 +45,14 @@ const Userregister = () => {
 
         await axios.post(("http://localhost:3005/user"), user)        
         .then(res => {console.log("Usuario registrado!")
-        }).catch(error => {
-            console.log(error)
-        });         
+        
+        setTimeout(()=> {
+            history.push('/login');
+        }, 2000); 
 
+        }).catch(err => {
+            console.log(err);
+        });         
     }
 
     return (
