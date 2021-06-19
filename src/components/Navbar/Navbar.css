@@ -39,10 +39,10 @@
 }
 
 .NavMenu {
-  width: 17vw;
+  width: 35vw;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .NavLink:hover {

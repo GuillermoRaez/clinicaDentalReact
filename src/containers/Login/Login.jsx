@@ -4,9 +4,10 @@ import "./Login.css";
 import axios from 'axios';
 import Navbar from '../../components/Navbar/Navbar';
 import Footbar from '../../components/Footbar/Footbar';
+import {connect} from 'react-redux';
+import {LOGIN} from '../../redux/types'
 
-
-const Login = () => {
+const Login = (props) => {
 
     let history = useHistory();
 
@@ -37,12 +38,14 @@ const Login = () => {
         
             try {let res = await axios.post('http://localhost:3005/user/login', body);
 
-            let token = res.data.token;
-            let user = res.data.user;
+            let data = { 
+            token: res.data.token,
+            user: res.data.user,
+            idUser: res.data.user._id
+            }
 
-            localStorage.setItem("token", token);
-            localStorage.setItem("UserData", JSON.stringify(res.data.user))
-            localStorage.setItem("user", JSON.stringify(user));
+            //Redux
+            props.dispatch({type:LOGIN,payload:data});
 
             setTimeout(()=> {
             
@@ -57,12 +60,14 @@ const Login = () => {
         
             try {let res = await axios.post('http://localhost:3005/dentist/login', body);
 
-            let token = res.data.token;
-            let dentist = res.data.dentist;
-            
-            localStorage.setItem("token", token);
-            localStorage.setItem('DentistData', JSON.stringify(res.data.dentist))
-            localStorage.setItem("dentist", JSON.stringify(dentist));
+            let data = {
+                token: res.data.token,
+                dentist: res.data.dentist,
+                idDentist: res.data.dentist._id
+            }
+
+            //Redux
+            props.dispatch({type:LOGIN,payload:data});
     
             setTimeout(()=> {
                 
@@ -98,4 +103,4 @@ const Login = () => {
     )
 }
 
-export default Login;
+export default connect()(Login);

@@ -1,14 +1,11 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
-import {useHistory} from 'react-router-dom';
 import Navbar from '../../components/Navbar/Navbar';
 import Footbar from '../../components/Footbar/Footbar';
 
 const Appointments = () => {
 
     const [citas,setCitas] = useState([]);
-
-    let history = useHistory();
 
     useEffect(() => {
 
