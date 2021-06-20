@@ -47,17 +47,16 @@ const Usersappointments = (props) => {
                 <Navbar/>
             </div>
             <div className="VistaCitas">
+            <div className="ContenedorCitas">
             {citas.map((appointment, index) => (
-
                 <div className="card" key={index}>
                     <p>Date: {appointment.appointmentDate}</p>
                     <p>Dentist: {appointment.dentist}</p>
-
                     <p>Treatment: {appointment.treatment}</p>
                     <p>Price: {appointment.price}</p>
                 </div>
-
             ))}
+            </div>
             </div>
             <div>
                 <Footbar/>

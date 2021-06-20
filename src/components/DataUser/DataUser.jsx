@@ -18,13 +18,13 @@ const Datauser = (props) => {
                 <img id="foto" src={ProfilePic} alt="Pphoto" height= "150" width="150"/>
                 </div>
                 <div className="InfoCard">
-                <input className="inputUser" type="text" name="firstname"  placeholder={props.credentials?.user.firstname} size="34" lenght='30'></input>
-                <input className="inputUser" type="text" name="lastname"  placeholder={props.credentials?.user.lastname} size="34" lenght='30' ></input>
-                <input className="inputUser" type="text" name="email"  placeholder={props.credentials?.user.email} size="34" lenght='30'></input>
-                <input className="inputUser" type="password" name="password"  placeholder="************" size="34" lenght='8'></input>
-                <input className="inputUser" type="text" name="address"  placeholder={props.credentials?.user.address} size="34" lenght='30'></input>
-                <input className="inputUser" type="text" name="phone"  placeholder={props.credentials?.user.phone} size="34" lenght='9'></input>
-                <input className="inputUser" type="text" name="birthday" placeholder={props.credentials?.user.birthday} size="34" ></input>
+                <input className="inputUser" readOnly type="text" name="firstname"  placeholder={props.credentials?.user.firstname} size="34" lenght='30'></input>
+                <input className="inputUser" readOnly type="text" name="lastname"  placeholder={props.credentials?.user.lastname} size="34" lenght='30' ></input>
+                <input className="inputUser" readOnly type="text" name="email"  placeholder={props.credentials?.user.email} size="34" lenght='30'></input>
+                <input className="inputUser" readOnly type="password" name="password"  placeholder="************" size="34" lenght='8'></input>
+                <input className="inputUser" readOnly type="text" name="address"  placeholder={props.credentials?.user.address} size="34" lenght='30'></input>
+                <input className="inputUser" readOnly type="text" name="phone"  placeholder={props.credentials?.user.phone} size="34" lenght='9'></input>
+                <input className="inputUser" readOnly type="text" name="birthday" placeholder={props.credentials?.user.birthday} size="34" ></input>
                 </div>
             </div>
     )

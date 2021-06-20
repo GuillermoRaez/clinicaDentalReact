@@ -16,7 +16,7 @@
 }
 
 #foto {
-    border-radius: 25%;
+    border-radius: 50%;
 }
 
 .InfoCard {
@@ -29,5 +29,6 @@
 }
 
 .inputUser {
-    border-radius: 25%;
+    text-align: center;
+    padding: 0.5em 1em;
 }

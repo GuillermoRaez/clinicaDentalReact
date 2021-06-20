@@ -1,9 +1,17 @@
 .VistaCitas {
-    height: 70vh;
-
+    padding: 4em 0 4em;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.ContenedorCitas{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .card {
@@ -17,7 +25,8 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-
+    margin-top: 2em;
+    margin-bottom: 2em;
 }
 
 p {

@@ -53,12 +53,6 @@ const Navbar = (props) => {
             <div className="NavLink">
               <NavLink style={{ color: 'inherit', textDecoration: 'inherit' }} onClick={()=>logOut()} to="/">Logout</NavLink>
             </div>
-            <div className="NavLink">
-              <NavLink style={{ color: 'inherit', textDecoration: 'inherit' }} to="/profile">Profile</NavLink>
-            </div>
-            <div className="NavLink">
-              <NavLink style={{ color: 'inherit', textDecoration: 'inherit' }} to="/appointments">Appointments</NavLink>
-            </div>
         </div>
       </div>
         )
