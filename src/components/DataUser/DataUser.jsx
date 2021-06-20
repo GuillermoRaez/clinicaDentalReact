@@ -10,7 +10,7 @@ const Datauser = (props) => {
 
     useEffect(()=>{
         console.log(props.credentials);
-    },[])
+    },)
 
     return (
             <div className="UserDataCard">

@@ -2,9 +2,10 @@ import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import Navbar from '../../components/Navbar/Navbar';
 import Footbar from '../../components/Footbar/Footbar';
+import {connect} from 'react-redux';
 import "./Userappointments.css"
 
-const Usersappointments = () => {
+const Usersappointments = (props) => {
 
     const [citas,setCitas] = useState([]);
 
@@ -20,10 +21,15 @@ const Usersappointments = () => {
     const getCitas = async () => {
 
         try {
-            let token = localStorage.getItem("token");
-            let res = await axios.get('http://localhost:3005/appointment/myappointments', {
+            console.log("esto es el id user",props.userData.idUser)
+            console.log("esto es el id user",props.userData.user._id)
+            // let userid = localStorage.getItem("usuario")
+            let body = {"usuario": props.userData.user._id}
+
+            // let token = localStorage.getItem("token");
+            let res = await axios.post('http://localhost:3005/appointment/myappointments', body, {
                 headers: {
-                    'Authorization': `token ${token}`
+                    'Authorization': `token ${props.userData.token}`
                 }
             })
             setCitas(res.data);
@@ -38,22 +44,23 @@ const Usersappointments = () => {
         return (
         <div>
             <div>
-                <Navbar></Navbar>
+                <Navbar/>
             </div>
             <div className="VistaCitas">
             {citas.map((appointment, index) => (
 
                 <div className="card" key={index}>
-                    <p>{appointment.appointmentDate}</p>
-                    <p>{appointment.doctor}</p>
-                    <p>{appointment.treatment}</p>
-                    <p>{appointment.price}</p>
+                    <p>Date: {appointment.appointmentDate}</p>
+                    <p>Dentist: {appointment.dentist}</p>
+
+                    <p>Treatment: {appointment.treatment}</p>
+                    <p>Price: {appointment.price}</p>
                 </div>
 
             ))}
             </div>
             <div>
-                <Footbar></Footbar>
+                <Footbar/>
             </div>
         </div>)
     } else {
@@ -67,4 +74,6 @@ const Usersappointments = () => {
     }
 }
 
-export default Usersappointments
+export default connect((state)=>(
+    {userData:state.credentials}
+))(Usersappointments);

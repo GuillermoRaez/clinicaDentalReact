@@ -2,6 +2,7 @@ import {LOGIN, LOGOUT, UPDATE_USER} from '../types';
 
 const initialState = {
     user : {},
+    idUser: '',
     token : ''
 };
 

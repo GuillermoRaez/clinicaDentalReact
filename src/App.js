@@ -5,7 +5,6 @@ import Home from './containers/Home/Home';
 
 import Userprofile from './containers/Userprofile/Userprofile';
 import Dentistprofile from './containers/Dentistprofile/Dentistprofile';
-import Appointments from './containers/Appointments/Appointments';
 import Userregister from './containers/Userregister/Userregister';
 import Dentistregister from './containers/Dentistregister/Dentistregister';
 import Navbar from './components/Navbar/Navbar';
