@@ -12,6 +12,7 @@ import Navbar from './components/Navbar/Navbar';
 import Footbar from './components/Footbar/Footbar';
 import Login from './containers/Login/Login';
 import Register from './containers/Register/Register';
+import Usersappointments from './containers/Usersappointments/Usersappointments';
 
 
 function App() {
@@ -30,7 +31,7 @@ function App() {
           <Route path="/dentistregister" exact component={Dentistregister}/>
           <Route path="/userprofile" exact component={Userprofile}/>
           <Route path="/dentistprofile" exact component={Dentistprofile}/>
-          <Route path="/appointments" exact component={Appointments}/>
+          <Route path="/myappointments" exact component={Usersappointments}/>
 
         </Switch>
         <Route path="/footbar" exact component={Footbar}/>

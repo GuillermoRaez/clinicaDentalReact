@@ -19,7 +19,7 @@ const Userprofile = () => {
                    <Boton destino="New Appointments" path="/newappointments"/>
                 </div>
                 <div className="userAction">
-                   <Boton destino="Appointments" path="/appointments"/>
+                   <Boton destino="My Appointments" path="/myappointments"/>
                 </div>
                 <div className="userAction">
                     <Boton destino="Dentists"path="/dentists"/>
