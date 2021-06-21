@@ -1,70 +1,39 @@
-# Getting Started with Create React App
+# Frontend React Project Nº6
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is the 2nd project related to the MongoDB database that we created for the project nº5. In this case we are adding a UI experience to the DataBase in order to visualise how our database works with React.
 
-## Available Scripts
+# The project. 🔧
 
-In the project directory, you can run:
+The project itself consisted on creating a Dental Clinic website (UI) connected to a database in which the user is able to access different routes and also able to do the following:
 
-### `yarn start`
+- Register
+- Login
+- See appointments
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Phase 1:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Starting date: June 8th 2021. <br>
+Due date: June 15th 2021.
 
-### `yarn test`
+## Phase 2:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Starting date: June 15th 2021. <br>
+Due date: June 21st 2021.
 
-### `yarn build`
+In order to achieve this work, [https://github.com/adrianfurlanc](Adrian) and [https://github.com/GuillermoRaez](myself) have worked together during the week days and I have worked on my own and pushed the project to other limits during my free time on the week-ends.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Programing tools
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- React
+- Redux
+- JavaScript
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Dependencies
 
-### `yarn eject`
+- Moment 
+- Axios
+- React-Router-Dom
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+# Special Thanks
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+To all my classmates, who have multiple times wanted to lend me a hand on this project, concerning the incovenients encountered during the realisation of the project. And, I also want to share a special thought for my partner [https://github.com/adrianfurlanc](Adrian) which is going through a difficult time. 

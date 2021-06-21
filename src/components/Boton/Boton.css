@@ -1,0 +1,24 @@
+.boton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 20vh;
+    width: 100%;
+    background: white;
+    background: linear-gradient(to right bottom, rgba(255,255,255,0.7), rgba(255,255,255,0.3));
+    border-radius: 2rem;
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    color: black;
+    transition: 0.2s;
+    cursor: pointer;
+    box-shadow: 0.1em 0.1em 0.2em 0.1em grey;
+}
+
+.boton:hover{
+
+    background-color: rgba(100, 11, 216, 0.5);
+    transition: 0.4s;
+}
