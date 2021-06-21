@@ -16,13 +16,7 @@ const Userprofile = () => {
             </div>
             <div className="userMain">
                 <div className="userAction">
-                   <Boton destino="New Appointments" path="/newappointments"/>
-                </div>
-                <div className="userAction">
                    <Boton destino="My Appointments" path="/myappointments"/>
-                </div>
-                <div className="userAction">
-                    <Boton destino="Dentists"path="/dentists"/>
                 </div>
             </div>
         </div>

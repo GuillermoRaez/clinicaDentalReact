@@ -1,6 +1,7 @@
 import React from 'react';
 import Footbar from '../../components/Footbar/Footbar';
 import Navbar from '../../components/Navbar/Navbar';
+import homepic from '../../img/pic1.jpeg';
 
 import "./Home.css";
 
@@ -10,7 +11,7 @@ const Home = () => {
     <div>
         <Navbar></Navbar>
         <div className="main">
-            Welcome to Adrian's and Guillermo's Dental Clinic
+           <img className="homepic" src={homepic} alt="home1"/>
         </div>
         <Footbar></Footbar>
     </div>

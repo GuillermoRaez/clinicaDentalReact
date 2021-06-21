@@ -7,3 +7,9 @@
     font-size: 22px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+.homepic {
+    width: 100%;
+    height: 70vh;
+    background-size: cover;
+}

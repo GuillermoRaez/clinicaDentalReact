@@ -5,11 +5,15 @@
     width: 100vw;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     z-index: 0;
 }
 
 .copyright {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.a:hover {
+    transform: underline scale(1.3);
 }
