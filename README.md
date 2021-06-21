@@ -8,23 +8,23 @@ The project itself consisted on creating a Dental Clinic website (UI) connected 
 
 - Home
 
-<img src="../img/Readme/Home.png">
+<img src="src/img/Readme/Home.png">
 
 - Register
 
-<img src="img/Readme/Register.png" width="1500">
+<img src="src/img/Readme/Register.png" width="1500">
 
 - Login
 
-<img src="img/Readme/Login.png" width="1500">
+<img src="src/img/Readme/Login.png" width="1500">
 
 - Profile
 
-<img src="img/Readme/Users_Profile.png" width="1500">
+<img src="src/img/Readme/Users_Profile.png" width="1500">
 
 - See appointments
 
-<img src="img/Readme/Appointments.png" width="1500">
+<img src="src/img/Readme/Appointments.png" width="1500">
 
 ## Phase 1:
 
