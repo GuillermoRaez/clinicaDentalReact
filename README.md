@@ -6,9 +6,25 @@ This is the 2nd project related to the MongoDB database that we created for the 
 
 The project itself consisted on creating a Dental Clinic website (UI) connected to a database in which the user is able to access different routes and also able to do the following:
 
+- Home
+
+<img src="../img/Readme/Home.png">
+
 - Register
+
+<img src="img/Readme/Register.png" width="1500">
+
 - Login
+
+<img src="img/Readme/Login.png" width="1500">
+
+- Profile
+
+<img src="img/Readme/Users_Profile.png" width="1500">
+
 - See appointments
+
+<img src="img/Readme/Appointments.png" width="1500">
 
 ## Phase 1:
 
