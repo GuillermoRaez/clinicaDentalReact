@@ -3,7 +3,8 @@ import axios from 'axios';
 import Navbar from '../../components/Navbar/Navbar';
 import Footbar from '../../components/Footbar/Footbar';
 import {connect} from 'react-redux';
-import "./Userappointments.css"
+import "./Userappointments.css";
+import moment from 'moment';
 
 const Usersappointments = (props) => {
 
@@ -50,7 +51,7 @@ const Usersappointments = (props) => {
             <div className="ContenedorCitas">
             {citas.map((appointment, index) => (
                 <div className="card" key={index}>
-                    <p>Date: {appointment.appointmentDate}</p>
+                    <p>Date: {moment(appointment.appointmentDate).format("LL")}</p>
                     <p>Dentist: {appointment.dentist}</p>
                     <p>Treatment: {appointment.treatment}</p>
                     <p>Price: {appointment.price}</p>
